@@ -28,12 +28,9 @@
 }
 input {
   padding: 12px 16px;
-  /* margin: 0 auto; */
-  /* justify-self/: center; */
   border-radius: 16px;
   max-width: 500px;
   flex-grow: 2;
-  /* flex-shrink: 1; */
   border: none;
   outline: none;
 }
@@ -45,7 +42,6 @@ input {
   border: 2px solid gold;
   transition: 0.2s;
   box-sizing: border-box;
-  /* margin-left: auto; */
 
   &:hover {
     border: 4px dashed gold;
@@ -99,7 +95,6 @@ input {
 .inside-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-  /* grid-template-rows: ; */
   gap: 24px;
   justify-content: space-evenly;
   margin: 24px 8px 24px 24px;
@@ -110,7 +105,6 @@ input {
   background-color: #cccccc;
   width: 200px;
   height: 170px;
-  /* border-radius: 16px; */
   padding: 4px;
 }
 .card-image-container {
