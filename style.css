@@ -13,6 +13,7 @@
   justify-content: space-between;
   gap: 24px;
 }
+
 .inside {
   background-color: white;
   border-radius: 0px 10px;
@@ -26,6 +27,7 @@
     outline: 2px solid blue;
   }
 }
+
 input {
   font-size: 16px;
   padding: 10px 16px;
@@ -35,6 +37,7 @@ input {
   border: none;
   outline: none;
 }
+
 .profile {
   height: 35px;
   width: 35px;
@@ -56,6 +59,7 @@ input {
   grid-template-columns: 200px 1fr;
   padding: 0 20px;
 }
+
 .aside {
   font-family: Roboto, Arial, sans-serif;
   background-color: #c4bce0;
@@ -74,51 +78,80 @@ input {
     background-color: #9ea2e0;
   }
 }
+
 .mobile-nav {
   display: none;
   color: #606060;
   overflow: scroll;
 }
+
 .mobile-nav label:hover {
   color: #0f0f0f;
   text-decoration: underline;
   text-underline-offset: 10px;
 }
+
 .mobile-nav::-webkit-scrollbar {
   display: none;
 }
+
 .mobile-nav label {
   margin: 0 18px;
   font-size: 20px;
   padding: 10px 0;
   text-align: center;
 }
+
 .inside-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  gap: 24px;
-  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, 260px);
+  gap: 24px 8px;
+  justify-content: center;
   margin: 24px 8px 24px 24px;
 }
+
 .box-container {
   display: flex;
   flex-direction: column;
   background-color: #cccccc;
-  width: 200px;
-  height: 170px;
+  width: 260px;
+  height: 212px;
   padding: 4px;
 }
+
 .card-image-container {
-  height: 100px;
+  height: 142px;
   background-color: gray;
   border-radius: 12px;
+  position: relative;
+  &:hover {
+    .hov-box-1 {
+      display: block;
+    }
+    .hov-box-2 {
+      display: block;
+    }
+  }
 }
+
 .card-title-container {
   margin: 8px 0 0;
   height: 32px;
   background-color: gray;
   border-radius: 12px;
+
+  svg {
+    position: relative;
+    top: 4px;
+    left: 225px;
+
+    &:hover {
+      background-color: #767676;
+      border-radius: 50%;
+    }
+  }
 }
+
 .card-meta-data-container {
   height: 14px;
   margin: 8px 0 0;
@@ -126,16 +159,53 @@ input {
   border-radius: 12px;
 }
 
+.hov-box-1 {
+  display: none;
+  height: 28px;
+  width: 28px;
+  background-color: #a52a2a;
+  border-radius: 6px;
+  position: absolute;
+  top: 10px;
+  left: 215px;
+}
+
+.hov-box-2 {
+  display: none;
+  height: 28px;
+  width: 28px;
+  background-color: #a52a2a;
+  border-radius: 6px;
+  position: absolute;
+  top: 45px;
+  left: 215px;
+}
+
+.time-stamp {
+  background-color: rgb(167, 187, 19);
+  width: 40px;
+  height: 20px;
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  left: 200px;
+  top: 115px;
+}
+
 @media (width <= 768px) {
   .aside {
     display: none;
   }
+
   .content-container {
     grid-template-columns: 1fr;
   }
+
   .mobile-nav {
     display: flex;
   }
+
   input {
     display: none;
   }
